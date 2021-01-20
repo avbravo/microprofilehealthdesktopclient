@@ -27,11 +27,6 @@ public class App {
     public static void main(String[] args) {
         // TODO code application logic here
         try {
-//                    Client client = ClientBuilder.newBuilder().build();
-//WebTarget target = client.target("http://localhost:8080/RESTEasyApplication/user-management/users");
-//Response response = target.request().get();
-//String users = response.readEntity(String.class);
-//
 
             ResteasyProviderFactory instance = ResteasyProviderFactory.getInstance();
             RegisterBuiltin.register(instance);
@@ -44,7 +39,6 @@ public class App {
                     .get();
 //String value = response.readEntity(String.class);
             Check value = response.readEntity(Check.class);
-//Check c = new Check();
             System.out.println(value.toString());
             response.close();
             
