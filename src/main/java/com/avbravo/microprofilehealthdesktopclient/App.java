@@ -33,7 +33,7 @@ public class App {
             instance.registerProvider(ResteasyJacksonProvider.class);
 
             ResteasyClient client = new ResteasyClientBuilder().build();
-            ResteasyWebTarget target = client.target("http://127.0.0.1:9001/health");
+            ResteasyWebTarget target = client.target("http://127.0.0.1:8080/health");
             javax.ws.rs.core.Response response = target.request()
                     .accept(MediaType.APPLICATION_JSON)
                     .get();
