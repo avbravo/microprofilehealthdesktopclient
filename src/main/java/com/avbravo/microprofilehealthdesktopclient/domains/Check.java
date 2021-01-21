@@ -43,10 +43,7 @@ public class Check {
 
     @Override
     public String toString() {
-//        String res ="\n";
-//        checks.forEach(p->{
-//            System.out.println(" "+p.toString());
-//        });
+
         return "Check{" + "status=" + status + ", checks=" + checks + '}';
     }
 

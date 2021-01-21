@@ -27,24 +27,18 @@ public class App {
     public static void main(String[] args) {
         // TODO code application logic here
         try {
-//                    Client client = ClientBuilder.newBuilder().build();
-//WebTarget target = client.target("http://localhost:8080/RESTEasyApplication/user-management/users");
-//Response response = target.request().get();
-//String users = response.readEntity(String.class);
-//
 
             ResteasyProviderFactory instance = ResteasyProviderFactory.getInstance();
             RegisterBuiltin.register(instance);
             instance.registerProvider(ResteasyJacksonProvider.class);
 
             ResteasyClient client = new ResteasyClientBuilder().build();
-            ResteasyWebTarget target = client.target("http://127.0.0.1:9001/health");
+            ResteasyWebTarget target = client.target("http://127.0.0.1:8080/health");
             javax.ws.rs.core.Response response = target.request()
                     .accept(MediaType.APPLICATION_JSON)
                     .get();
 //String value = response.readEntity(String.class);
             Check value = response.readEntity(Check.class);
-//Check c = new Check();
             System.out.println(value.toString());
             response.close();
             

@@ -1,0 +1,11 @@
+{
+    "status": "UP",
+    "checks": [{
+            "name": "SystemLivenessCheck Liveness Check",
+            "status": "UP",
+            "data": {
+                "memory used": "215549008",
+                "memory max": "978976768"
+            }
+        }]
+}
